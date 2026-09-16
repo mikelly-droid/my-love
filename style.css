@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.inicio {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.painel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.991);
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: rgb(255, 209, 209);
+    padding-top: 20px;
+}
+
+#sim {
+    height: 40px;
+    width: 60px;
+    background-color: rgba(235, 121, 193, 0.83);
+    border: 2px solid rgb(176, 5, 91);
+    border-radius: 10px;
+}
+
+#nao {
+    height: 40px;
+    width: 60px;
+    background-color: rgba(235, 121, 193, 0.83);
+    border: 2px solid rgb(176, 5, 91);
+    border-radius: 10px;
+}
+.painel p {
+    color: rgb(255, 209, 209);
+    padding-top: 30px;
+    font-size: 20px;
+}
