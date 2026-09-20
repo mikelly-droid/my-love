@@ -9,14 +9,38 @@
 <body>
     <div class="inicio">
         <img src="imagens/baner.jpg" alt="banner">
-
         <div class="painel">
             <h1>Oi meu amor!</h1>
+            <img src="https://i.pinimg.com/originals/08/90/0a/08900aed8dde1a9fafa58dd8043f1557.gif" alt="coração">
             <p>Quer ver uma surpresa?</p>
-            <button id="sim"> Sim! </button>
-            <button id="nao"> Não! </button>
-        
+            <div class="botoes">
+                <a href="pag2.html">
+                    <button id="sim">Sim!</button>
+                </a>
+                <button 
+                onmouseover="fuja()"
+                ontouchstart="fuja()"
+                id="nao"> Não!
+                </button>
+            </div>
         </div>
     </div>
+    <script>
+  function fuja() {
+    var btn = document.getElementById("nao");
+    var inicio = document.querySelector(".inicio");
+    inicio.appendChild(btn);
+    btn.style.position = "absolute";
+    btn.style.zIndex = "10";
+    var larguraJanela = inicio.clientWidth;
+    var alturaJanela = inicio.clientHeight;
+    var maxX = larguraJanela - btn.offsetWidth;
+    var maxY = alturaJanela - btn.offsetHeight;
+    var aleatorioX = Math.floor(Math.random() * maxX);
+    var aleatorioY = Math.floor(Math.random() * maxY);
+    btn.style.left = aleatorioX + "px";
+    btn.style.top = aleatorioY + "px";
+}
+    </script>
 </body>
 </html>
