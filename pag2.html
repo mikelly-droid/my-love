@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Love</title>
+    <link rel="stylesheet" href="style2.css">
+    <title>Envelope</title>
 </head>
 <body>
-    <h1>Surpresa para você!</h1>
-    <p>Espero que você goste!</p>
+    <div class="envelope" onclick="abrirEnvelope()">
+
+     <div class="esquerda"></div>
+     <div class="direita"></div>
+        <div class="papel">
+            <p>Para você...</p>
+        </div>
+     </div>
+    <script>
+
+          function abrirEnvelope() {
+         var envelope = document.querySelector(".envelope");
+
+         envelope.classList.add("aberto");
+     }
+     </script>
+
 </body>
 </html>

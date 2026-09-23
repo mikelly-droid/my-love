@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(243, 166, 166);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope {
+    position: relative;
+
+    width: 300px;
+    height: 200px;
+
+    background-color: rgb(235, 121, 193);
+
+    border-radius: 5px;
+}
+
+.envelope::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid rgb(176, 5, 91);
+
+    z-index: 3;
+
+    transform-origin: top;
+    transition: transform 0.8s ease;
+}
+.envelope::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid rgb(220, 90, 170);
+
+    z-index: 3;
+}
+
+.papel {
+    position: absolute;
+
+    width: 220px;
+    height: 150px;
+
+    background-color: white;
+
+    top: 25px;
+    left: 40px;
+
+    text-align: center;
+
+    z-index: 1;
+}
+.envelope.aberto::before {
+    transform: rotateX(180deg);
+}
+
+.esquerda,
+.direita {
+    position: absolute;
+
+    top: 20px;
+
+    width: 150px;
+    height: 180px;
+
+    background-color: rgb(220, 90, 170);
+
+    z-index: 2;
+}
+
+.esquerda {
+    left: 0;
+
+    clip-path: polygon(
+        0 0,
+        100% 50%,
+        100% 100%,
+        0 100%
+    );
+}
+
+.direita {
+    right: 0;
+
+    clip-path: polygon(
+        100% 0,
+        0 50%,
+        0 100%,
+        100% 100%
+    );
+}
